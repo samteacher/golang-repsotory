@@ -1,3 +1,3 @@
-# golang-repsotory
+# Golang-repsotory
 Golang Study the warehouse
 
