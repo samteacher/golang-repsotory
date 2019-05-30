@@ -1,7 +1,0 @@
-.DS_Store
-gopm
-*.exe
-*.exe~
-repos/
-vendor/
-.vendor/
