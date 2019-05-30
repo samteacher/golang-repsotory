@@ -53,11 +53,4 @@ func main() {
 	// 随机数
 	//other.RandNumber()
 
-	x := "hello"
-	for _, x := range x {
-		x := x + 'A' - 'a'
-		fmt.Printf("%c", x) // "HELLO" (one letter per iteration)
-	}
-
-
 }
