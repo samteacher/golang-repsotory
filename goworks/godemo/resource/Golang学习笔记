@@ -1,0 +1,55 @@
+git clone https://github.com/golang/tools.git  把相关的tools下的依赖安装好
+go version 查询go版本
+go env  查询 GOPATH、GOBIN、GOBROOT 等详细信息
+
+
+goWorkSpace  // (goWorkSpace为GOPATH目录)
+  -- bin  // golang编译可执行文件存放路径，可自动生成。
+  -- pkg  // golang编译的.a中间文件存放路径，可自动生成。
+  -- src  // 源码路径。按照golang默认约定，go run，go install等命令的当前工作路径（即在此路径下执行上述命令）。
+
+
+export GOROOT=/usr/local/go #设置为go安装的路径
+export GOPATH=$HOME/gocode #默认安装包的路径
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+下载资源包时使用  go get; go install 是无效的
+
+
+操作内容：
+https://www.jianshu.com/p/6fab1e7199b8 
+https://www.jianshu.com/p/83beca927c9e
+https://www.cnblogs.com/pyyu/p/8032257.html
+###########################################################
+
+1.Go语言中的函数名、变量名、常量名、类型名、语句标号和包名等所有的命名，都遵循一个简单的命名规则：
+    一个名字必须以一个字母（Unicode字母）或下划线开头，后面可以跟任意数量的字母、数字或下划线。
+    大写字母和小写字母是不同的：heapSort和Heapsort是两个不同的名字
+
+2.Go语言主要有四种类型的声明语句：
+    var / const / type / func; 分别对应变量、常量、类型和函数实体对象的声明
+
+3.数据类型
+    类型可以是基本类型，如：int、float、bool、string；
+    结构化的（复合的），如：struct、array、slice、map、channel；只描述类型的行为的，如：interface。
+    结构化的类型没有真正的值，它使用 nil 作为默认值。值得注意的是，Go 语言中不存在类型继承
+
+4.map声明
+    var [map变量名] map[key] value
+    其中：key为键类型，value为值类型; 例如：value不仅可以是标注数据类型，也可以是自定义数据类型
+
+5.slice 的创建
+    创建 slice 的方式有以下几种：
+    1.直接声明	var slice []int
+    2.slice := *new([]int)
+    3.字面量	slice := []int{1,2,3,4,5}
+    4.slice := make([]int, 5, 10)
+    5.从切片或数组“截取”	slice := array[1:5] 或 slice := sourceSlice[1:5]
+
+6.golang中数组和切片的区别：
+    1.切片时指针类型，数组是值类型
+    2.数组的长度是固定的，而切片不是（切片是动态的数组）
+    3.切片比数组多一个属性：容量（cap)
+    4.切片的底层是数组
+
+7.
